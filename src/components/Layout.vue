@@ -281,10 +281,6 @@ onMounted(async () => {
 });
 
 const fetchTasks = async () => {
-  console.log(import.meta.env.VITE_VUE_API_URL);
-  console.log(import.meta.env.VITE_API_TOKEN_TASK);
-
-
   try {
     const { data: {data} } = await clienteAxios.get('/tasks');
     tasks.value = data;
